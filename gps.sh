@@ -33,7 +33,7 @@ function DecodeLine() {
 
 function SerialWriteAndRead() {
 	exec 4<$tty 5>$tty
-        stty -F $tty 9600 
+        stty -F $tty 115200 
 	echo "$1" >&5
 	while IFS='' read -t 1 -r line || [[ -n "$line"  ]]; do
 	    echo "$line"
